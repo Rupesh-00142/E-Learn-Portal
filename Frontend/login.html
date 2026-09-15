@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In - E-Learn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">E-Learn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions" id="navActions">
+      <a href="signup.html" class="btn btn-primary">Registration</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="form-page">
+    <div class="form-card">
+      <h1>Welcome Back</h1>
+      <p class="sub">Log in to continue your learning journey.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-row">
+          <label><input type="checkbox" style="width:auto; margin-right:6px;">Remember me</label>
+          <a href="#" style="color:var(--primary); font-weight:600;">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+      </form>
+
+      <div class="divider">OR</div>
+
+      <button type="button" class="social-btn">Continue with Google</button>
+
+      <p class="form-footer-note">Don't have an account? <a href="signup.html">Registration</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid #1F2937; padding-top:22px;">
+      <span>&copy; 2026 E-Learn. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms.html">Terms</a> &middot; <a href="sitemap.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>

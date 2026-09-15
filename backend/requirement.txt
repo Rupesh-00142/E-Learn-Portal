@@ -1,0 +1,6 @@
+Flask>=3.0
+
+# gunicorn is only needed for production deployment (see DEPLOYMENT.md).
+# For local development, `python app.py` uses Flask's built-in dev server
+# and does not need gunicorn at all.
+gunicorn>=21.2; sys_platform != "win32"

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - E-Learn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">E-Learn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="btn btn-outline">Log in</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="form-page">
+    <div class="form-card">
+      <h1>Create Your Account</h1>
+      <p class="sub">Start learning for free</p>
+
+      <form id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
+        </div>
+        <div class="form-row">
+          <label><input type="checkbox" id="agreeTerms" style="width:auto; margin-right:6px;">I agree to the Terms &amp; Privacy Policy</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      </form>
+
+      <div class="divider">OR</div>
+
+      <button type="button" class="social-btn">Sign up with Google</button>
+
+      <p class="form-footer-note">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid #1F2937; padding-top:22px;">
+      <span>&copy; 2026 E-Learn. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms.html">Terms</a> &middot; <a href="sitemap.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Learn - Online Courses</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">E-Learn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Registration</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Learn new skills <span>anytime, anywhere</span></h1>
+        <p>Join thousands of students learning web development, data science, design, 
+          and business from expert instructors — at your own pace.</p>
+        <h2>Build Your Skills, Build Your Future</h2>
+
+        <p>Learning new skills is very important for school and college students. 
+          It helps us improve our knowledge and become more confident. 
+          Students can learn skills like communication, computer knowledge, teamwork, 
+          time management, and problem-solving. We can learn these skills through books,
+           online courses, practical activities, and by taking part in school or 
+           college programs. Learning new skills also helps us prepare for 
+           our future studies and careers. Therefore, every student should try to
+            learn something new regularly.</p>
+        <div class="hero-buttons">
+          <a href="courses.html" class="btn btn-primary">Courses</a>
+          <a href="signup.html" class="btn btn-outline">Get Started Free</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=440&fit=crop" alt="Student learning online">
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Explore Categories</h2>
+      <p class="section-subtitle">Pick a subject and start learning today with courses designed by industry professionals.</p>
+      <div class="categories-grid" id="homeCategoriesGrid">
+        <a href="courses.html?category=school" class="category-card">
+          <div class="category-icon">&#127891;</div>
+          <h3>School</h3>
+          <p id="countSchool">Loading...</p>
+        </a>
+        <a href="courses.html?category=college" class="category-card">
+          <div class="category-icon">&#127979;</div>
+          <h3>College</h3>
+          <p id="countCollege">Loading...</p>
+        </a>
+        <a href="courses.html?category=university" class="category-card">
+          <div class="category-icon">&#127891;</div>
+          <h3>University</h3>
+          <p id="countUniversity">Loading...</p>
+        </a>
+      </div>
+      <style>#homeCategoriesGrid{grid-template-columns:repeat(3, 1fr);}</style>
+    </div>
+  </section>
+
+  <!-- Featured Courses -->
+  <section class="section" style="background:var(--bg-light);">
+    <div class="container">
+      <h2 class="section-title">Recently Added Notes</h2>
+      <p class="section-subtitle">The latest notes added to the platform.</p>
+      <div class="courses-grid" id="featuredCoursesGrid">
+        <p style="color:var(--text-light); text-align:center; grid-column:1/-1;">Loading...</p>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="courses.html" class="btn btn-outline">View All Notes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Getting started with E-Learn takes just three simple steps.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Create an Account</h3>
+          <p>Registration free in less than a minute and set up your learning profile.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Choose a Course</h3>
+          <p>Browse our catalog and enroll in the course that matches your goals.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Start Learning</h3>
+          <p>Build Your Future</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to start learning?</h2>
+      <a href="signup.html" class="btn btn-primary">Registration Free</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff;">E-Learn</a>
+        <p>Online courses to help you build real skills and grow your careers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="courses.html">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <a href="courses.html">School</a>
+        <a href="courses.html">College</a>
+        <a href="courses.html">University</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="contact.html">Help Center</a>
+        <a href="Faqs.html">FAQs</a>
+        <a href="Terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 E-Learn. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms.html">Terms</a> &middot; <a href="sitemap.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - E-Learn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">E-Learn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Registration</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" style="padding:48px 0;">
+    <div class="container">
+      <h1 style="font-size:32px;">Admin Panel</h1>
+      <p id="roleBadgeText">Manage courses and (if you're a Super Admin) other users' access.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:720px;">
+
+      <div id="adminGate" style="display:none;">
+        <div class="form-card" style="max-width:none; text-align:center;">
+          <h1 style="font-size:22px;">Admin access required</h1>
+          <p class="sub">This account is a Student. Ask a Super Admin to give you Admin access from their User Management panel.</p>
+          <a href="index.html" class="btn btn-outline btn-block">Back to Home</a>
+        </div>
+      </div>
+
+      <div id="adminContent" style="display:none;">
+
+        <div class="form-card" style="max-width:none; margin-bottom:32px;">
+          <h1 style="font-size:22px; text-align:left;" id="courseFormHeading">Add a New Course</h1>
+          <p class="sub" style="text-align:left;">This will appear immediately on the Courses page for everyone.</p>
+
+          <form id="addCourseForm" novalidate>
+            <div class="form-group">
+              <label for="courseTitle">Course Title</label>
+              <input type="text" id="courseTitle" placeholder="e.g. Advanced React Patterns" required>
+            </div>
+            <div class="form-group">
+              <label for="courseCategory">Category</label>
+              <select id="courseCategory" required style="width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:var(--radius); font-size:14px;">
+                <option value="">Select a category</option>
+                <option value="school">School</option>
+                <option value="college">College</option>
+                <option value="university">University</option>
+                <option value="__custom__">+ Add new category...</option>
+              </select>
+              <input type="text" id="customCategoryInput" placeholder="Type new category name (e.g. Engineering, Coaching Classes)" style="display:none; margin-top:8px;">
+            </div>
+            <div class="form-group">
+              <label for="courseLevel">Level</label>
+              <select id="courseLevel" required style="width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:var(--radius); font-size:14px;">
+                <option value="">Select a level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="coursePrice">Price (INR)</label>
+              <input type="number" id="coursePrice" placeholder="0" min="0" step="0" required>
+            </div>
+            <div class="form-group">
+              <label for="courseDescription">Description</label>
+              <textarea id="courseDescription" rows="3" placeholder="What will students learn in this course?"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Course Modules</label>
+              <p style="font-size:12.5px; color:var(--text-light); margin:-2px 0 12px;">
+                Add each module with its actual lesson content and (optionally) a resource link — a PDF, video, or article students can open. This is what students see once they enroll.
+               
+
+             </p>
+              <div id="moduleBuilder"></div>
+              <button type="button" id="addModuleBtn" class="btn btn-outline" style="margin-top:6px;">+ Add Module</button>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top:24px;" id="courseFormSubmitBtn">Add Course</button>
+            <button type="button" class="btn btn-outline btn-block" id="cancelEditBtn" style="display:none; margin-top:10px;">Cancel Edit</button>
+          </form>
+        </div>
+
+        <h2 class="section-title" style="text-align:left; font-size:22px;">Existing Courses</h2>
+        <div id="adminCourseList" style="display:flex; flex-direction:column; gap:10px; margin-bottom:40px;">
+          <p style="color:var(--text-light); font-size:14px;">Loading courses...</p>
+        </div>
+
+        <div id="userManagementSection" style="display:none;">
+          <h2 class="section-title" style="text-align:left; font-size:22px;">User Management</h2>
+          <p style="color:var(--text-light); font-size:14px; margin-top:-8px; margin-bottom:20px;">
+            Only Super Admins see this. Change anyone's role — Student, Admin, or Super Admin.
+          </p>
+          <div id="userList" style="display:flex; flex-direction:column; gap:10px;">
+            <p style="color:var(--text-light); font-size:14px;">Loading users...</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid #1F2937; padding-top:22px;">
+      <span>&copy; 2026 E-Learn. All rights reserved.</span>
+      <span>Privacy Policy &middot; Terms &middot; Sitemap</span>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>
