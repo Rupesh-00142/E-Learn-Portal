@@ -1,0 +1,27 @@
+# ===== Backend: generated & sensitive files — NEVER commit these =====
+# This folder contains the database (everyone's accounts and data),
+# the session-signing secret key, and all uploaded files. If this gets
+# pushed to a public GitHub repo, anyone can read every user's data and
+# forge login tokens with the secret key.
+elearning-backend-python/data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+*.egg-info/
+
+# ===== Logs =====
+*.log
+elearning-backend-python/server.log
+elearning-site/frontend.log
+
+# ===== OS/editor clutter =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
