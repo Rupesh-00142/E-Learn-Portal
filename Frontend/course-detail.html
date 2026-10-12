@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Course - E-Learn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">E-Learn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html" class="active">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Registration</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="courseLoading" class="container" style="padding:64px 0; text-align:center;">
+    <p style="color:var(--text-light);">Loading course...</p>
+  </div>
+
+  <div id="courseNotFound" class="container" style="padding:64px 0; text-align:center; display:none;">
+    <h1 style="font-size:28px; margin-bottom:12px;">Course not found</h1>
+    <p style="margin-bottom:24px;">This course may have been removed or the link is incorrect.</p>
+    <a href="courses.html" class="btn btn-primary"> All Courses</a>
+  </div>
+
+  <div id="courseContent" style="display:none;">
+
+    <section class="course-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / <a href="courses.html">Courses</a> / <span id="crumbTitle"></span></p>
+        <span class="course-tag" id="courseTagLine"></span>
+        <h1 id="courseTitle"></h1>
+        <p id="courseDescTop"></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container course-layout">
+
+        <div class="course-main">
+          <h2>Course Curriculum</h2>
+          <div id="curriculumList"></div>
+
+          <h2>Description</h2>
+          <p id="courseDescFull"></p>
+        </div>
+
+        <aside class="sidebar-card">
+          <div class="sidebar-price" id="sidebarPrice"></div>
+          <a href="#" id="enrollBtn" class="btn btn-primary btn-block">Enroll Now</a>
+          <ul class="sidebar-list">
+            <li><span>Category</span><strong id="sidebarCategory"></strong></li>
+            <li><span>Level</span><strong id="sidebarLevel"></strong></li>
+            <li><span>Modules</span><strong id="sidebarModules"></strong></li>
+            <li><span>Language</span><strong>Hindi,English</strong></li>
+            <li><span>Access</span><strong>Lifetime</strong></li>
+          </ul>
+        </aside>
+
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff;">E-Learn</a>
+        <p>Online courses to help you build real skills and grow your career.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="courses.html">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <a href="courses.html">School</a>
+        <a href="courses.html">College</a>
+        <a href="courses.html">University</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="contact.html">Help Center</a>
+        <a href="Faqs.html">FAQs</a>
+        <a href="Terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 E-Learn. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms.html">Terms</a> &middot; <a href="sitemap.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>

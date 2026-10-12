@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - E-Learn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">E-Learn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Registration</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" style="padding:48px 0;">
+    <div class="container">
+      <h1 style="font-size:32px;">Get in Touch</h1>
+      <p>Have a question about a course or need help with your account? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <div>
+        <h2 style="margin-bottom:24px;">Contact Information</h2>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">&#9993;</div>
+          <div>
+            <h4>Email</h4>
+            <p>rupeshkumart03@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">&#9742;</div>
+          <div>
+            <h4>Phone</h4>
+            <p>+91- 9302818171</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">&#128205;</div>
+          <div>
+            <h4>Office</h4>
+            <p>Bhilai, durg C.G</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">&#128337;</div>
+          <div>
+            <h4>Support Hours</h4>
+            <p>Monday – Friday, 10am – 4pm </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card" style="max-width:none;">
+        <h1 style="font-size:22px; text-align:left;">Send us a message</h1>
+        <p class="sub" style="text-align:left;">We typically respond within 24 hours.</p>
+        <form id="contactForm">
+          <input type="hidden" name="_subject" value="New message from E-Learn contact form">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none;" tabindex="-1" autocomplete="off">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Rupesh tandan" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="abcd@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" placeholder="How can we help?" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+          </div>
+          <button type="submit" id="sendBtn" class="btn btn-primary btn-block">Send Message</button>
+          <p id="formStatus" style="margin-top:12px; text-align:center; font-size:14px;"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff;">E-Learn</a>
+        <p>Online courses to help you build real skills and grow your career.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="About.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="courses.html">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <a href="courses.html">School</a>
+        <a href="courses.html">College</a>
+        <a href="courses.html">University</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="contact.html">Help Center</a>
+        <a href="Faqs.html">FAQs</a>
+        <a href="Terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 E-Learn. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms.html">Terms</a> &middot; <a href="sitemap.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('sendBtn');
+  const status = document.getElementById('formStatus');
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.textContent = '';
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/rupeshkumart03@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    const data = await res.json();
+    console.log('FormSubmit response:', res.status, data);
+    if (data.success === true || data.success === 'true') {
+      status.style.color = 'green';
+      status.textContent = 'Thank you! Your message has been sent.';
+      form.reset();
+    } else {
+      status.style.color = 'red';
+      status.textContent = 'Error: ' + (data.message || 'Unknown error (status ' + res.status + ')');
+    }
+  } catch (err) {
+    console.error('Send failed:', err);
+    status.style.color = 'red';
+    status.textContent = 'Network error: ' + err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Send Message';
+});
+</script>
+</body>
+</html>
