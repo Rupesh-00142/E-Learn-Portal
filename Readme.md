@@ -100,15 +100,6 @@ section.
 - Security: HTML-escaping everywhere user content is displayed, restricted
   file-upload types, path-traversal-safe file serving, rate limiting,
   CORS locked to known origins, and a full security checklist in
-  `DEPLOYMENT.md`
-
-## Deploying this for real
-
-See **[`backend/DEPLOYMENT.md`](./-backend/DEPLOYMENT.md)**
-for a complete walkthrough: a small VPS with nginx + free HTTPS
-(Let's Encrypt), a security checklist to run through before going live,
-and backup guidance. If you're using Oracle Cloud's free tier specifically,
-start with **[`ORACLE_SETUP.md`](./backend/ORACLE_SETUP.md)** instead.
 
 ## Tech stack
 
