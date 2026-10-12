@@ -110,3 +110,8 @@ section.
 
 Add whatever license fits your use of this project (MIT is a common,
 permissive choice) — there isn't one included by default.
+
+## License
+
+Add whatever license fits your use of this project (MIT is a common,
+permissive choice) — there isn't one included by default.
