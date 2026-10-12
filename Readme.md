@@ -22,8 +22,6 @@ simple REST API:
     ├── app.py                  (the entire API server)
     ├── requirements.txt
     ├── README.md                → backend-specific setup & API reference
-    ├── DEPLOYMENT.md             → putting this on a real server (VPS, HTTPS, nginx)
-    ├── ORACLE_SETUP.md           → step-by-step for Oracle Cloud's free tier
     └── data/                     → created automatically (database, uploads, secret key)
 ```
 
